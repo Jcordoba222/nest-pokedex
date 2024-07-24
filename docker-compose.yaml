@@ -1,0 +1,28 @@
+
+
+services:
+  db:
+    image: mongo:5
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGODB_DATABASE: nest-pokemon
+    volumes:
+      - mongo:/data/db
+volumes:
+  mongo:
+
+
+# services:
+#   db:
+#     image: postgres:latest  # Utilizamos la imagen más reciente de PostgreSQL
+#     restart: always
+#     ports:
+#       - "5432:5432"  # Mapeamos el puerto 5432 del contenedor al mismo puerto del host
+#     environment:
+#       POSTGRES_DB: nest_pokemon  # Nombre de la base de datos
+#       POSTGRES_USER: admin  # Usuario de la base de datos
+#       POSTGRES_PASSWORD: password  # Contraseña del usuario
+#     volumes:
+#       - ./postgres:/var/lib/postgresql/data  # Directorio en el host para almacenar datos persistentes

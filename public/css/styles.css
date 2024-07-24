@@ -1,0 +1,11 @@
+html, body{
+    padding: 20px;
+    background-image: url('https://mrwallpaper.com/images/high/gengar-pokemon-4k-1xybxrhafhvwq8xh.webp');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+h1{
+    font-size: 20px;
+    color: red;
+    
+}
