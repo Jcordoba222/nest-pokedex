@@ -9,8 +9,13 @@ async function bootstrap() {
     new ValidationPipe({
     whitelist: true,
     forbidNonWhitelisted: true,
+    transform: true,
+    transformOptions: {
+      enableImplicitConversion: true,
+    }
   }));
-  await app.listen(3001);
+  await app.listen(process.env.PORT);//Necesario por heroku da el puero basado en las variables entorno
+  console.log(`Aplicacion corriendo en el puerto ${process.env.PORT}`)
 
 
 
